@@ -1,2 +1,0 @@
-# MRobot
-Open Source Robotics
