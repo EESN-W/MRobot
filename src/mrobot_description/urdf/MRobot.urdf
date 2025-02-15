@@ -1,0 +1,895 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="MRobot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-2.7756E-17 2.7756E-17 0.093261"
+        rpy="0 0 0" />
+      <mass
+        value="7.1556" />
+      <inertia
+        ixx="0.036675"
+        ixy="6.4322E-18"
+        ixz="-8.9158E-18"
+        iyy="0.076383"
+        iyz="2.5114E-19"
+        izz="0.094459" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.54902 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="LFW_Link">
+    <inertial>
+      <origin
+        xyz="2.3243E-06 -0.020721 -6.7841E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.48673" />
+      <inertia
+        ixx="0.00050184"
+        ixy="-3.1361E-08"
+        ixz="2.2406E-09"
+        iyy="0.00081481"
+        iyz="9.1535E-09"
+        izz="0.00050184" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/LFW_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/LFW_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LFW_Joint"
+    type="continuous">
+    <origin
+      xyz="0.12 0.14 0.0599"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="LFW_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="LBW_Link">
+    <inertial>
+      <origin
+        xyz="1.8572E-06 -0.020721 -1.5535E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.48673" />
+      <inertia
+        ixx="0.00050184"
+        ixy="-2.5058E-08"
+        ixz="4.0997E-09"
+        iyy="0.00081481"
+        iyz="2.0962E-08"
+        izz="0.00050184" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/LBW_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/LBW_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LBW_Joint"
+    type="continuous">
+    <origin
+      xyz="-0.12 0.14 0.0599"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="LBW_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="RFW_Link">
+    <inertial>
+      <origin
+        xyz="-2.4027E-06 0.020721 -2.9925E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.48673" />
+      <inertia
+        ixx="0.00050184"
+        ixy="-3.2419E-08"
+        ixz="-1.0217E-09"
+        iyy="0.00081481"
+        iyz="-4.0377E-09"
+        izz="0.00050185" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/RFW_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/RFW_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RFW_Joint"
+    type="continuous">
+    <origin
+      xyz="0.12 -0.14 0.0599"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RFW_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="RBW_Link">
+    <inertial>
+      <origin
+        xyz="2.3148E-06 0.020721 7.1032E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.48673" />
+      <inertia
+        ixx="0.00050184"
+        ixy="3.1232E-08"
+        ixz="-2.3363E-09"
+        iyy="0.00081481"
+        iyz="9.5841E-09"
+        izz="0.00050184" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/RBW_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/RBW_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RBW_Joint"
+    type="continuous">
+    <origin
+      xyz="-0.12 -0.14 0.0599000145774858"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RBW_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="IMU_Link">
+    <inertial>
+      <origin
+        xyz="-2.7756E-17 0 0.025"
+        rpy="0 0 0" />
+      <mass
+        value="0.34358" />
+      <inertia
+        ixx="0.00025428"
+        ixy="5.1726E-22"
+        ixz="-6.1904E-21"
+        iyy="0.00025428"
+        iyz="-1.6674E-37"
+        izz="0.00038703" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/IMU_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0.50196 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/IMU_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="IMU_Joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0.0999"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="IMU_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Camera_Link">
+    <inertial>
+      <origin
+        xyz="-0.05702 5.5511E-17 -4.6026E-05"
+        rpy="0 0 0" />
+      <mass
+        value="1.0337" />
+      <inertia
+        ixx="0.0028575"
+        ixy="-6.1857E-20"
+        ixz="-1.4178E-07"
+        iyy="0.0010679"
+        iyz="1.6895E-19"
+        izz="0.0030374" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/Camera_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.16863 0.16863 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/Camera_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Camera_Joint"
+    type="fixed">
+    <origin
+      xyz="0.18 0 0.1799"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Camera_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Laser_Link">
+    <inertial>
+      <origin
+        xyz="0 0 -0.028399"
+        rpy="0 0 0" />
+      <mass
+        value="0.21092" />
+      <inertia
+        ixx="0.00011218"
+        ixy="1.9163E-23"
+        ixz="-1.8966E-21"
+        iyy="0.00011218"
+        iyz="2.7996E-21"
+        izz="0.00015264" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/Laser_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.039216 0.4902 0.7098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/Laser_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Laser_Joint"
+    type="fixed">
+    <origin
+      xyz="0.12 0 0.2799"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Laser_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Arm1_Link">
+    <inertial>
+      <origin
+        xyz="1.0996E-05 -0.0041714 0.050968"
+        rpy="0 0 0" />
+      <mass
+        value="0.18488" />
+      <inertia
+        ixx="0.00027199"
+        ixy="3.3806E-08"
+        ixz="-9.832E-08"
+        iyy="0.00025917"
+        iyz="3.7297E-05"
+        izz="6.488E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/Arm1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.34118 0.83922 0.41176 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/Arm1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Arm1_Joint"
+    type="continuous">
+    <origin
+      xyz="-0.12 0 0.1299"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Arm1_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Arm2_Link">
+    <inertial>
+      <origin
+        xyz="-0.00011471 -0.044898 0.0091401"
+        rpy="0 0 0" />
+      <mass
+        value="0.08435" />
+      <inertia
+        ixx="4.4126E-05"
+        ixy="-2.3556E-07"
+        ixz="1.9975E-07"
+        iyy="2.5859E-05"
+        iyz="1.1127E-05"
+        izz="3.5146E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/Arm2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.34118 0.83922 0.41176 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/Arm2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Arm2_Joint"
+    type="continuous">
+    <origin
+      xyz="5.2723E-05 -0.02 0.1"
+      rpy="0 0 0" />
+    <parent
+      link="Arm1_Link" />
+    <child
+      link="Arm2_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Arm3_Link">
+    <inertial>
+      <origin
+        xyz="-0.0011642 0.00914 0.044883"
+        rpy="0 0 0" />
+      <mass
+        value="0.08435" />
+      <inertia
+        ixx="4.4117E-05"
+        ixy="3.0307E-07"
+        ixz="4.8958E-07"
+        iyy="3.5142E-05"
+        iyz="-1.1125E-05"
+        izz="2.5871E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/Arm3_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.34118 0.83922 0.41176 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/Arm3_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Arm3_Joint"
+    type="continuous">
+    <origin
+      xyz="-0.00035165 -0.060001 0.019994"
+      rpy="0 0 0" />
+    <parent
+      link="Arm2_Link" />
+    <child
+      link="Arm3_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Arm4_Link">
+    <inertial>
+      <origin
+        xyz="-0.00029434 0.044897 0.0091415"
+        rpy="0 0 0" />
+      <mass
+        value="0.08435" />
+      <inertia
+        ixx="4.4125E-05"
+        ixy="2.7981E-07"
+        ixz="2.1815E-07"
+        iyy="2.5861E-05"
+        iyz="-1.1127E-05"
+        izz="3.5144E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/Arm4_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.34118 0.83922 0.41176 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/Arm4_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Arm4_Joint"
+    type="continuous">
+    <origin
+      xyz="-0.0015726 0.019996 0.059981"
+      rpy="0 0 0" />
+    <parent
+      link="Arm3_Link" />
+    <child
+      link="Arm4_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Arm5_Link">
+    <inertial>
+      <origin
+        xyz="-0.00096691 0.0091404 0.044888"
+        rpy="0 0 0" />
+      <mass
+        value="0.08435" />
+      <inertia
+        ixx="4.4122E-05"
+        ixy="2.3751E-07"
+        ixz="3.9101E-07"
+        iyy="3.5142E-05"
+        iyz="-1.1127E-05"
+        izz="2.5867E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/Arm5_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.34118 0.83922 0.41176 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/Arm5_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Arm5_Joint"
+    type="continuous">
+    <origin
+      xyz="-0.00056143 0.059999 0.019996"
+      rpy="0 0 0" />
+    <parent
+      link="Arm4_Link" />
+    <child
+      link="Arm5_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Arm6_Link">
+    <inertial>
+      <origin
+        xyz="8.7382E-05 0.044897 0.0091457"
+        rpy="0 0 0" />
+      <mass
+        value="0.08435" />
+      <inertia
+        ixx="4.413E-05"
+        ixy="-9.4656E-08"
+        ixz="-7.5296E-08"
+        iyy="2.5861E-05"
+        iyz="-1.113E-05"
+        izz="3.514E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/Arm6_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.34118 0.83922 0.41176 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/Arm6_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Arm6_Joint"
+    type="continuous">
+    <origin
+      xyz="-0.0012896 0.019996 0.059987"
+      rpy="0 0 0" />
+    <parent
+      link="Arm5_Link" />
+    <child
+      link="Arm6_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Arm7_Link">
+    <inertial>
+      <origin
+        xyz="0.00043811 -0.0091458 0.044895"
+        rpy="0 0 0" />
+      <mass
+        value="0.08435" />
+      <inertia
+        ixx="4.4127E-05"
+        ixy="1.6742E-07"
+        ixz="-2.4306E-07"
+        iyy="3.514E-05"
+        iyz="1.1129E-05"
+        izz="2.5864E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/Arm7_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.34118 0.83922 0.41176 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/Arm7_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Arm7_Joint"
+    type="continuous">
+    <origin
+      xyz="0.00017885 0.059999 0.020003"
+      rpy="0 0 0" />
+    <parent
+      link="Arm6_Link" />
+    <child
+      link="Arm7_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Arm8_Link">
+    <inertial>
+      <origin
+        xyz="0.00030661 -0.044611 0.0085859"
+        rpy="0 0 0" />
+      <mass
+        value="0.082779" />
+      <inertia
+        ixx="4.2149E-05"
+        ixy="5.5172E-08"
+        ixz="-1.4313E-08"
+        iyy="2.424E-05"
+        iyz="1.0427E-05"
+        izz="3.4247E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/Arm8_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.34118 0.83922 0.41176 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/Arm8_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Arm8_Joint"
+    type="continuous">
+    <origin
+      xyz="0.00065353 -0.020003 0.059995"
+      rpy="0 0 0" />
+    <parent
+      link="Arm7_Link" />
+    <child
+      link="Arm8_Link" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Arm9_Link">
+    <inertial>
+      <origin
+        xyz="-0.00044489 -1.0208E-05 0.045738"
+        rpy="0 0 0" />
+      <mass
+        value="0.037119" />
+      <inertia
+        ixx="3.7094E-05"
+        ixy="-6.8342E-11"
+        ixz="3.062E-07"
+        iyy="3.7097E-05"
+        iyz="7.0261E-09"
+        izz="5.6183E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/Arm9_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.34118 0.83922 0.41176 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://mrobot_description/meshes/Arm9_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Arm9_Joint"
+    type="continuous">
+    <origin
+      xyz="0.00033025 -0.060002 0.019991"
+      rpy="0 0 0" />
+    <parent
+      link="Arm8_Link" />
+    <child
+      link="Arm9_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+</robot>

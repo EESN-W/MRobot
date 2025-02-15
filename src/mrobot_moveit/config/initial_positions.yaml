@@ -1,0 +1,12 @@
+# Default initial positions for MRobot's ros2_control fake system
+
+initial_positions:
+  Arm1_Joint: 0
+  Arm2_Joint: 0
+  Arm3_Joint: 0
+  Arm4_Joint: 0
+  Arm5_Joint: 0
+  Arm6_Joint: 0
+  Arm7_Joint: 0
+  Arm8_Joint: 0
+  Arm9_Joint: 0
