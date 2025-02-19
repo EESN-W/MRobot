@@ -6,10 +6,10 @@ def generate_launch_description():
     # Set MoveIt configuration
     moveit_config = MoveItConfigsBuilder("MRobot", package_name="mrobot_moveit").to_moveit_configs()
 
-    # Define hello_moveit node
-    set_target_pose = Node(
+    # Define visualizing_in_rviz node
+    visualizing_in_rviz = Node(
         package="mrobot_moveit",
-        executable="set_target_pose",
+        executable="visualizing_in_rviz",
         output="screen",
         parameters=[
             moveit_config.robot_description,  # Load URDF
@@ -18,4 +18,4 @@ def generate_launch_description():
         ],
     )
 
-    return LaunchDescription([set_target_pose])
+    return LaunchDescription([visualizing_in_rviz])

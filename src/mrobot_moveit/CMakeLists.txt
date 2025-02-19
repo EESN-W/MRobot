@@ -9,16 +9,46 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(moveit_ros_planning_interface REQUIRED)
 find_package(rclcpp REQUIRED)
+find_package(moveit_visual_tools REQUIRED)
 
 add_executable(set_target_pose src/set_target_pose.cpp)
+add_executable(visualizing_in_rviz src/visualizing_in_rviz.cpp)
+add_executable(planning_around_objects src/planning_around_objects.cpp)
 
 target_include_directories(set_target_pose PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>)
+
+target_include_directories(visualizing_in_rviz PUBLIC
+$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+$<INSTALL_INTERFACE:include>)
+
+target_include_directories(planning_around_objects PUBLIC
+$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
+$<INSTALL_INTERFACE:include>)
+
 target_compile_features(set_target_pose PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
+target_compile_features(visualizing_in_rviz PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
+target_compile_features(planning_around_objects PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
+
 ament_target_dependencies(
   set_target_pose
   "moveit_ros_planning_interface"
+  "moveit_visual_tools"
+  "rclcpp"
+)
+
+ament_target_dependencies(
+  visualizing_in_rviz
+  "moveit_ros_planning_interface"
+  "moveit_visual_tools"
+  "rclcpp"
+)
+
+ament_target_dependencies(
+  planning_around_objects
+  "moveit_ros_planning_interface"
+  "moveit_visual_tools"
   "rclcpp"
 )
 
@@ -32,6 +62,8 @@ endif()
 install(DIRECTORY config DESTINATION share/${PROJECT_NAME})
 install(FILES .setup_assistant DESTINATION share/${PROJECT_NAME})
 install(TARGETS set_target_pose DESTINATION lib/${PROJECT_NAME})
+install(TARGETS visualizing_in_rviz DESTINATION lib/${PROJECT_NAME})
+install(TARGETS planning_around_objects DESTINATION lib/${PROJECT_NAME})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
